@@ -1,0 +1,255 @@
+
+.nl-footer {
+  width: 100%;
+  background: #ffffff;
+  color: #55545d;
+  font-family: inherit;
+  border-top: 1px solid #eeeeef;
+}
+
+.nl-footer * {
+  box-sizing: border-box;
+}
+
+.nl-footer-main {
+  width: min(100% - 80px, 1440px);
+  margin: 0 auto;
+  padding: 62px 0 40px;
+  display: grid;
+  grid-template-columns: 1.55fr 1fr 1.1fr 1.1fr 0.9fr;
+  column-gap: 55px;
+  align-items: start;
+}
+
+.nl-footer-brand {
+  max-width: 290px;
+}
+
+.nl-footer-logo {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  margin-bottom: 16px;
+}
+
+.nl-footer-logo-image {
+  width: 120px;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+.nl-footer-description {
+  color: #777680;
+  font-size: 13px;
+  line-height: 1.65;
+  margin: 0 0 20px;
+  max-width: 275px;
+}
+
+.nl-footer-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 21px;
+}
+
+.nl-footer-contact a {
+  color: #777680;
+  font-size: 12px;
+  line-height: 1.55;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.nl-footer-contact a:hover,
+.nl-footer-column a:hover,
+.nl-footer-bottom-links a:hover {
+  color: #f47735;
+}
+
+.nl-footer-socials {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nl-footer-socials a {
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #dedee1;
+  border-radius: 8px;
+  color: #414047;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.nl-footer-socials a:hover {
+  color: #ffffff;
+  background: #7450a4;
+  border-color: #7450a4;
+  transform: translateY(-3px);
+}
+
+.nl-footer-column h3 {
+  color: #777680;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin: 3px 0 23px;
+}
+
+.nl-footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+
+.nl-footer-column li {
+  margin: 0;
+  padding: 0;
+}
+
+.nl-footer-column a {
+  color: #55545d;
+  text-decoration: none;
+  font-size: 13px;
+  line-height: 1.5;
+  transition: color 0.2s ease;
+}
+
+.nl-footer-bottom {
+  min-height: 68px;
+  border-top: 1px solid #eeeeef;
+  width: 100%;
+  padding: 18px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.nl-footer-bottom p {
+  color: #777680;
+  font-size: 11px;
+  margin: 0;
+}
+
+.nl-footer-bottom-links {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.nl-footer-bottom-links a,
+.nl-footer-bottom-links button {
+  color: #777680;
+  font-family: inherit;
+  font-size: 11px;
+  text-decoration: none;
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.nl-footer-bottom-links a:not(:last-of-type)::after {
+  content: "·";
+  margin-left: 5px;
+  color: #aaa9af;
+}
+
+.nl-footer-bottom-links button:hover {
+  color: #f47735;
+}
+
+/* TABLET */
+@media (max-width: 1050px) {
+  .nl-footer-main {
+    width: calc(100% - 60px);
+    grid-template-columns: 1.4fr 1fr 1fr;
+    gap: 42px 35px;
+  }
+
+  .nl-footer-brand {
+    grid-row: span 2;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 700px) {
+  .nl-footer-main {
+    width: calc(100% - 40px);
+    padding: 42px 0 35px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 38px 24px;
+  }
+
+  .nl-footer-brand {
+    grid-column: 1 / -1;
+    grid-row: auto;
+    max-width: 360px;
+  }
+
+  .nl-footer-description {
+    max-width: 330px;
+  }
+
+  .nl-footer-column h3 {
+    margin-bottom: 17px;
+  }
+
+  .nl-footer-column ul {
+    gap: 11px;
+  }
+
+  .nl-footer-bottom {
+    padding: 22px 20px;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .nl-footer-bottom-links {
+    justify-content: flex-start;
+    gap: 8px;
+  }
+}
+
+/* SMALL MOBILE */
+@media (max-width: 380px) {
+  .nl-footer-main {
+    width: calc(100% - 32px);
+    column-gap: 16px;
+  }
+
+  .nl-footer-column a {
+    font-size: 12px;
+  }
+
+  .nl-footer-column h3 {
+    font-size: 10px;
+    letter-spacing: 1.5px;
+  }
+
+  .nl-footer-bottom-links a,
+  .nl-footer-bottom-links button {
+    font-size: 10px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nl-footer a,
+  .nl-footer button {
+    transition: none;
+  }
+}
